@@ -22,10 +22,10 @@ class Config {
   }
 
   public function db_connect(){
-    $this->dbuser = 'Dev';
-    $this->dbname = 'Dev_Env';
-    $this->dbpwd = 'D3v';
-    $this->dbhost = '192.168.10.13';
+    $this->dbuser = '';
+    $this->dbname = '';
+    $this->dbpwd = '';
+    $this->dbhost = '';
     //Create connection
     $this->conn = new PDO("sqlsrv:server=$this->dbhost;Database=$this->dbname",  $this->dbuser, $this->dbpwd);
     $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
