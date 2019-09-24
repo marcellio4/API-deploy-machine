@@ -26,7 +26,7 @@ $cto = '';
 if (isset($_POST['uksubmit'])) {
     $name = encodeUrl($_POST['ukenvname']);
     $hyperv = clean_str($_POST['hypervlabel']);
-    $job = new Job("UK-0-Deploy-UK-Machines", "eefc40a3-cfc4-49c1-aa2b-169245cf0923");
+    $job = new Job("UK-0-Deploy-UK-Machines", $token);
     $parameter = "&Environmentname=" . $name . "&Hyper-v=" . $hyperv . "&userid=" . $_SESSION['userid'];
     $url = $job->setLinkParameter($parameter);
     Jenkins::executeUrl($url);
@@ -35,7 +35,7 @@ if (isset($_POST['uksubmit'])) {
 if (isset($_POST['ussubmit'])) {
     $name = encodeUrl($_POST['usenvname']);
     $hyperv = clean_str($_POST['hypervlabel']);
-    $job = new Job("US-0-Deploy-US-Machine", "usfc40a3-cfc4-49c1-aa2b-169245cf0923");
+    $job = new Job("US-0-Deploy-US-Machine", $token);
     $parameter = "&Environmentname=" . $name . "&Hyper-v=" . $hyperv . "&userid=" . $_SESSION['userid'];
     $url = $job->setLinkParameter($parameter);
     Jenkins::executeUrl($url);
@@ -44,7 +44,7 @@ if (isset($_POST['ussubmit'])) {
 if (isset($_POST['ctosubmit'])) {
     $name = encodeUrl($_POST['ctoenvname']);
     $hyperv = clean_str($_POST['hypervlabel']);
-    $job = new Job("aCust-0-Deploy-Customer-Machines", "custfc40a3-cfc4-49c1-aa2b-169245cf0923");
+    $job = new Job("aCust-0-Deploy-Customer-Machines", $token);
     $parameter = "&Environmentname=" . $name . "&Hyper-v=" . $hyperv . "&userid=" . $_SESSION['userid'];
     $url = $job->setLinkParameter($parameter);
     Jenkins::executeUrl($url);
