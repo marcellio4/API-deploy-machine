@@ -30,7 +30,7 @@ if (isset($_POST['envvalue']) && isset($_POST['newname'])) {
     $id = clean_str($_SESSION['userid']);
     $pool = $env->renamePool($val, $name, $id);
     if ($pool) {
-        $url = "@jenkins.experienceengine.com/job/zz-PoolVMs/buildWithParameters?token=pool40a3-cfc4-49c1-aa2b-169245cf0923";
+        $url = "@jenkins.experienceengine.com/job/zz-PoolVMs/buildWithParameters?token=";
         Jenkins::executeUrl($url);
         echo 1;
     } else {
