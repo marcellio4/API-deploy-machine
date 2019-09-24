@@ -124,7 +124,7 @@ if (isset($_POST['EnvName']) && isset($_POST['sizeGB'])) {
         $gb = $gb*1024*1024*1024;
         $start_60 = $start_60*1024*1024*1024;
         $min_40 = $min_40*1024*1024*1024;
-        $job = new Job("zz-ReconfigureVMMemory", "repomem40a3-cfc4-49c1-aa2b-169245cf0923");
+        $job = new Job("zz-ReconfigureVMMemory", $token);
         $parameter = "&EnvironmentName=" . $name . "&MemoryStartupBytes=" . $start_60 . "&MemoryMinimumBytes=" . $min_40 . "&MemoryMaximumBytes=" . $gb;
         $start_url = $job->setLinkParameter($parameter);
         Jenkins::executeUrl($start_url);
