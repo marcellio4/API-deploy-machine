@@ -1,0 +1,53 @@
+<main id="wrapper">
+  <section id="ukdeploy">
+    <form action="index.php?page=deploy" method="post">
+      <fieldset>
+        <h2>Deploy UK machines</h2>
+        <label for="ukenvname">Environment name</label>
+        <input type="text" name="ukenvname" id="ukenvname">
+        <select name="hypervlabel">
+          <option value="DEV1">DEV1</option>
+          <option value="DEV2" selected>DEV2</option>
+        </select>
+        <input type="submit" name="uksubmit" value="Deploy" id="uk">
+        <div class="col-auto uk">
+          <span class="error">[+uk+]</span>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+  <section id="usdeploy">
+    <form action="index.php?page=deploy" method="post">
+      <fieldset>
+        <h2>Deploy US machines</h2>
+        <label for="usenvname">Environment name</label>
+        <input type="text" name="usenvname" id="usenvname">
+        <select name="hypervlabel">
+          <option value="DEV1">DEV1</option>
+          <option value="DEV2" selected>DEV2</option>
+        </select>
+        <input type="submit" name="ussubmit" value="Deploy" id="us">
+        <div class="col-auto us">
+          <span class="error">[+us+]</span>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+  <section id="customer">
+    <form action="index.php?page=deploy" method="post">
+      <fieldset>
+        <h2>Deploy Customer machines</h2>
+        <label for="ctoenvname">Environment name</label>
+        <input type="text" name="ctoenvname" id="ctoenvname">
+        <select name="hypervlabel">
+          <option value="DEV1">DEV1</option>
+          <option value="DEV2" selected>DEV2</option>
+        </select>
+        <input type="submit" name="ctosubmit" value="Deploy" id="cto">
+        <div class="col-auto cto">
+          <span class="error">[+cto+]</span>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+</main>

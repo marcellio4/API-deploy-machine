@@ -1,0 +1,7 @@
+#wrapper {
+  display: none;
+}
+.table-fake .table-row .details .details-row .details-col.details-ip .status-good .env_name:hover{
+	content:"hello";
+	display: block;
+}

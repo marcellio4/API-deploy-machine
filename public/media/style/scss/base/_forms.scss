@@ -1,0 +1,260 @@
+/* shouldn't need to edit this file*/
+
+form {
+
+	label,
+	.optionset legend {
+		margin-bottom: 5px;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: .8em;
+		display: block;
+
+		&.left {
+			display: block;
+			border: none;
+			font-size: 14px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+
+	}
+
+	.form-row {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.form-row>.col,
+	.form-row>[class*=col-] {
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+
+	.form-group {
+		margin-bottom: 1rem;
+	}
+
+	.field-width,
+	.text input,
+	.password input,
+	.numeric input,
+	.email input,
+	.file input,
+	input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	textarea,
+	select,
+	input[type="month"] {
+		padding: 5px;
+		width: 100%;
+		border: 1px solid #cccccc;
+		font-family: var(--font-stack-default);
+		font-size: .95em;
+		border-radius: 4px;
+
+		&:hover,
+		&:focus {
+			border-color: #b5b5b5;
+		}
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover, 
+		&:-webkit-autofill:focus{
+			-webkit-text-fill-color: var(--default-color);
+			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+			transition: background-color 5000s ease-in-out 0s;
+		} 
+	}
+
+	
+
+	.field {
+		margin-bottom: 1.2em;
+	}
+
+	/* checkbox group and radio group both use class .optionset */
+	.optionset {
+		legend {
+			border: none;
+			font-size: 1em;
+		}
+
+		li {
+			float: left;
+			font-size: 0.9em;
+			margin-bottom: 0.4em;
+			margin-right: 20px;
+
+			label,
+			input {
+				display: inline-block;
+				margin: 0;
+				vertical-align: middle;
+				font-weight: normal;
+			}
+
+			input {
+				margin-right: 3px;
+			}
+		}
+
+		.middleColumn {
+			margin-bottom: 1em;
+			overflow: hidden;
+		}
+
+	}
+
+	.checkbox {
+		display: inline-block;
+		position: static;
+
+		li {
+			float: left;
+			margin-bottom: 10px;
+			margin-right: 2%;
+			position: relative;
+			width: 48%;
+
+			input {
+				position: absolute;
+				top: 5px;
+			}
+
+			label {
+				line-height: 1.2;
+				padding-left: 17px;
+
+			}
+		}
+	}
+
+	/* single checkbox */
+	.field.checkbox {
+
+		input[type=checkbox] {
+			margin-left: 0;
+		}
+
+		label {
+			text-transform: none;
+			display: inline-block;
+		}
+	}
+
+	.required.message {
+		clear: both;
+		display: block;
+		position: relative;
+	}
+
+	.requiredField label:after,
+	.mathspamprotector label:after {
+		content: " *";
+	}
+
+	.required.message,
+	.message.bad,
+	.warning,
+	.mathspamprotector .error {
+		color: #b80000;
+	}
+
+	.message.good {
+		color: #0e670e;
+		background: #bce4b7;
+		padding: 8px;
+	}
+
+	.Actions .action,
+	input[type="submit"].action {
+		@extend .button;
+	}
+
+
+}
+
+
+.filter {
+	/* input[type="checkbox"], input[type="radio"] {
+      position: absolute;
+      left: -9999px;
+    } */
+
+	.field .checkboxset {
+		label {
+
+			margin: 10px 0;
+			cursor: pointer;
+
+			&:before,
+			&:after {
+				border-radius: 6px;
+			}
+
+			/* &:before,&:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+          }
+
+          &:before {
+              display: block;             
+              border: 1px solid #cccccc;
+              
+            }
+
+            &:after {
+              display: none;             
+              background-color: #0CB1D1;
+              content:"\f00c";
+              font-family:icomoon;
+              color:#ffffff;
+			  text-align:center;
+			  padding-right: 3px;
+            } */
+		}
+
+		/* input[type="radio"] + label:before,
+        input[type="radio"] + label:after {
+          border-radius: 50%;
+        }
+
+        input:focus + label:before {
+          border-color: #cccccc;
+        }
+
+
+        input:checked + label:after, input:hover + label:after {
+          display: block;
+        }
+
+        input:hover + label:after{
+            background-color: #9DCBD4;
+        }
+
+        input:focus + label:after{
+            background-color: #0CB1D1;
+        } */
+
+	}
+
+}
+
+.f-item {
+	margin-bottom: 1em;
+
+	>label {
+		margin-bottom: .5em;
+	}
+}

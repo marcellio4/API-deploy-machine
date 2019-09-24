@@ -1,0 +1,36 @@
+/* Always inlude - Don't need to edit */
+@import 'base/reset';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/include-media'; /*media queries function file from http://include-media.com/documentation/ */
+
+/*define breakpoints here*/
+$breakpoints: (
+  'CustomSmall': 430px,
+  'phone': 576px,
+  'tablet': 768px,
+  'tabletWide': 992px,
+  'desktop': 1024px,
+  'extraLarge': 1200px
+);
+
+@import 'base/bootstrap-4-grid';
+
+/* custom variables */
+@import 'custom/variables';
+@import 'base/placeholders';
+
+// BASE FILES
+
+@import 'base/typo';
+@import 'base/forms';
+
+// THEME
+
+@import 'custom/scrollbar';
+@import 'custom/buttons';
+@import 'custom/forms';
+@import 'custom/datepicker';
+@import 'custom/theme';
+
+ 

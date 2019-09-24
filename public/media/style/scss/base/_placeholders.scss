@@ -1,0 +1,26 @@
+%flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+%ul-checklist {
+	list-style-type:none !important;
+	margin-left:0;
+
+  li{
+    display: block;
+    padding-left: 25px; margin-bottom: 0.2em;
+    &:before {
+      content: "\f00c";
+      color: #AE9857;
+      font-size: 1em;
+      padding-right: 6px;
+      /*---*/
+      display: inline-block; height: 1.5em; width: 25px;
+      margin-left: -25px;
+    }
+  }
+}

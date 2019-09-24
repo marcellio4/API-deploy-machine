@@ -1,0 +1,44 @@
+#ui-datepicker-div{
+
+    padding: 20px;
+    background: #444956;
+    margin-top: 20px;
+
+    .ui-datepicker-header{
+        display: flex;
+        flex-flow: wrap;
+
+        .ui-datepicker-prev, .ui-datepicker-next{
+            width: 50%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            opacity: .8;
+
+            &:hover, &:focus{
+                opacity: 1;
+            }
+        }
+        .ui-datepicker-next{
+            text-align: right;
+        }
+    }
+
+    .ui-datepicker-title, .ui-datepicker-buttonpane{
+        display: flex;
+        flex-flow: wrap;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .ui-datepicker-title select{
+        @extend %form-field;
+        width: 48%;
+        
+    }
+    .ui-datepicker-buttonpane button{
+        margin-bottom: 0;
+    }
+    
+    
+}

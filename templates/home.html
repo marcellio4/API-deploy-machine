@@ -1,0 +1,70 @@
+<main id="wrapper">
+  <div class="row ">
+    <div class="col-auto create-form">
+      <button id="create-open-button" class="button">Create environment</button>
+      <form id="rename" action="index.php?page=tools" method="post">
+        <fieldset>
+          <legend>Create an environment</legend>
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <label for="pool">Pool</label>
+              <select id="pool" name="envvalue">
+                <option value="">Please choose ...</option>
+                [+option+]
+              </select>
+            </div>
+            <div class="col-auto">
+              <label for="newname">Environment</label>
+              <input type="text" name="newname" id="newname" value="" placeholder="Name it">
+            </div>
+            <div class="col-auto">
+              <label for="rename">New Name</label>
+              <input type="submit" name="rename" value="Create" class="mb-0" id="envpool">
+            </div>
+         
+          </div>
+       
+        </fieldset>
+        
+        <button id="create-close-button" type="button">Close</button>
+      </form>
+	</div> 
+	<div class="col-md-3">
+		<div class="display-flex storage">
+			<div class="meter">
+				<span data-free="[+DEV1+]" data-total="64"></span>
+			</div>
+			<span>Dev1 <span><span class="free"></span>GB free</span></span>
+		</div>
+	
+		<div class="display-flex storage">
+			<div class="meter">
+				<span data-free="[+DEV2+]" data-total="64"></span>
+			</div>
+			<span>Dev2 <span><span class="free"></span>GB free</span></span>
+		</div>
+	
+	</div>
+    <div class="col text-right">
+      <form class="searchIp form-filter" action="index.php?page=home" method="post">
+        <label for="filtertext">Filter</label>
+        <input type="text" name="filtertext" id="ip" placeholder="Filter">
+      </form>
+      
+      <button class="button button-secondary">View mine</button>
+    </div>
+  </div>
+
+  <div class="table-fake">
+    <div class="table-header">
+      <div class="header__item"><a id="owner" class="filter__link" href="#">Owner</a></div>
+      <div class="header__item"><a id="id" class="filter__link filter__link--number" href="#">ID</a></div>
+      <div class="header__item"><a id="name" class="filter__link" href="#">Environment Name</a></div>
+      <div class="header__item"><a id="date" class="filter__link" href="#">Date Created</a></div>
+      <div class="header__item"><a id="desc" class="filter__link" href="#">Description</a></div>
+    </div>
+    <div class="table-content highlightable">
+      [+table+]
+    </div>
+  </div>
+</main>

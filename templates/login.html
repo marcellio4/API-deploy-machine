@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Dev Environments</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../media/style/style.css">
+  <link rel="stylesheet" href="../media/style/mystyle.css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../media/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../media/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../media/images/favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="mask-icon" href="../media/images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <main id="wrapper">
+    <section id="login_body">
+      <form id='login' action='index.php?page=login' method='post' accept-charset='UTF-8'>
+        <fieldset>
+			<h1>Hi</h1>
+			<h2>Login to continue</h2>
+			<div class="form-group">
+				<label for='username'>Username:</label>
+				<input type='text' name='username' id='username' value="[+name+]" placeholder="Username" />
+			</div>
+			<div class="form-group">
+				<label for='password'>Password:</label>
+				<input type='password' name='password' id='password' value="[+pwd+]" placeholder="Password" />
+			</div>
+			<input type='submit' id="btn" name='login' value='Login' />
+			<span class="off hide">Username or Password can not be empty</span>
+			[+error+]
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://www.amcharts.com/lib/version/4.4.1/core.js"></script>
+  <script src="https://www.amcharts.com/lib/version/4.4.1/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/clipboard.min.js"></script>
+</body>
+
+</html>

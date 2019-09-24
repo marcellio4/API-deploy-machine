@@ -1,0 +1,92 @@
+// _mixins.scss
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	 -moz-border-radius: $radius;
+	  -ms-border-radius: $radius;
+	      border-radius: $radius;
+}
+
+@mixin box-shadow($options) {
+    -webkit-box-shadow: $options;
+    -moz-box-shadow: $options;
+    box-shadow: $options;
+}
+
+@mixin columns($count){
+    -webkit-column-count: $count;
+       -moz-column-count: $count;
+            column-count: $count;
+}
+
+@mixin transition($args) {
+	-webkit-transition: $args;
+		 -moz-transition: $args;
+		  -ms-transition: $args;
+		   -o-transition: $args;
+			  transition: $args;
+}
+
+//use psudo for all :before and :after
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+@mixin padding-top-bottom($amount) {
+  padding-top:$amount;
+  padding-bottom:$amount;
+}
+
+@mixin margin-center() {
+  margin-left: auto;
+	maring-right: auto;
+}
+
+@mixin flex-wrap($justify: flex-start, $valign: stretch, $wrap: wrap){
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: $wrap;
+  /*justify-content: flex-start;*/
+  justify-content: $justify;
+  /*align-items: baseline;*/
+  align-items: $valign;
+}
+
+// generic transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+
+@mixin defineColorHSL($color, $hue, $saturation, $lightness){
+	#{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
+  }

@@ -1,0 +1,102 @@
+:root,
+[data-theme="default"] {
+	--font-stack-default: "Varela Round", sans-serif;
+	--body-bg: #252830;
+	--default-color: white;
+	--subtle-color: #a4a6ad;
+	--primary-color: #32b9bc;
+	--primary-color-hover: #14959a;
+
+	--login-bg: #3F465B;
+
+	--overlay-bg: rgba(37, 40, 48, 0.63);
+	--modal-bg: #503c65;
+	--modal-scroll-thumb: #71568e;
+	--success-color: #388e3c;
+	--error-color: #c62828;
+
+	--progress-bar:#3d8af7;
+	--progress-bar-alert:#c34040;
+
+	--nav-link: var(--subtle-color);
+	--nav-link-active: var(--default-color);
+
+	--table-head-title: var(--default-color);
+	--table-color: #999ca5;
+	--highlight: rgba(67, 75, 98, 0.47);
+
+	--label-color: var(--default-color);
+
+	--field-bg-color: #565e6a;
+	--field-color: 232, 232, 232;
+	--field-default-border: none;
+	--field-border: rgba(245, 245, 245, 0.46);
+
+	// style
+	--switch-width: 64px;
+	--switch-height: 32px;
+	--switch-padding: 3px;
+	--switch-color-active: var(--body-bg);
+	--switch-color-off: #505769;
+	--switch-animation-duration: 0.2s;
+
+	--scroll-thumb: #f7f9ff26;
+	--scroll-thumb-modal: #6e5b82;
+
+	--close-bg: var(--default-color);
+
+	--button-primary-bg-color: var(--primary-color);
+	--button-primary-bg-color-hover: var(--primary-color-hover);
+	--button-primary-border-color: var(--primary-color);
+	--button-primary-color: var(--default-color);
+	--button-primary-color-hover: var(--default-color);
+	--button-secondary-color: var(--default-color);
+	--button-secondary-hover-color: var(--default-color);
+	--button-secondary-hover-bg-color: #ffffff52;
+
+	--create-form-bg:#434b62;
+	--create-form-title-color:#8e98b7;
+	--create-form-title-color-hover:#c4cff0;
+	--create-form-bg-light: rgba(67, 75, 98, 0.51);
+
+	--meter-bg: rgba(255,255,255,0.20);
+}
+[data-theme="light"] {
+	--body-bg: #efefef;
+	--default-color: #333;
+	--nav-link: #696969;
+	--nav-link-active: #333;
+
+	--login-bg: rgba(255, 255, 255, 0.61);
+
+	--table-head-title: #333;
+	--table-color: #828282;
+	--highlight: white;
+
+	--label-color: var(--default-color);
+
+	--field-bg-color: white;
+	--field-default-border: 0px 0px 3px -1px #00000057;
+	--field-color: 70, 70, 70;
+	--field-border: rgba(0, 0, 0, 0.27);
+
+	--switch-color-active: #c7c7c7;
+	--switch-color-off: #505769;
+
+	--scroll-thumb: #545558;
+
+	--button-primary-bg-color: var(--primary-color);
+	--button-primary-bg-color-hover: var(--primary-color-hover);
+	--button-primary-border-color: var(--primary-color);
+	--button-primary-color: var(--default-color);
+	--button-primary-color-hover: var(--default-color);
+	--button-secondary-color: var(--primary-color);
+	--button-secondary-hover-bg-color: var(--primary-color-hover);
+
+	--create-form-bg:rgba(100, 112, 148, 0.51);
+	--create-form-title-color:var(--default-color);
+	--create-form-title-color-hover:var(--default-color);
+	--create-form-bg-light: rgba(147, 155, 180, 0.51);
+
+	--meter-bg:#cacaca ;
+}

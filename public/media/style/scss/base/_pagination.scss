@@ -1,0 +1,32 @@
+
+$default-color:#428bca;
+
+.pagination{
+  padding: 36px 0;
+  font-family: $font-stack-style;
+	font-size: .9em;
+  li{
+
+	display: inline-block;
+    a{
+		background: #ffffff;
+		@include border-radius(1000px);
+		color: $default-color;
+		display: inline-block;
+		line-height: 2em;
+		margin-right: 5px;
+		text-align: center;
+		width: 2em;
+		display: block;
+
+      
+	}
+	
+	&:hover a, &:focus a,&.active a{
+		background-color: $default-color;
+		color:white;
+    }
+
+  }
+
+}

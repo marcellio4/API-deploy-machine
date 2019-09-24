@@ -1,0 +1,410 @@
+%form-field {
+	width: 100%;
+	max-width: 340px;
+	border: none;
+	border-radius: 3px;
+	background-color: var(--field-bg-color);
+	border: none;
+	box-shadow: var(--field-default-border);
+	color: var(--field-color);
+	padding: 10px 10px;
+
+	&::placeholder{
+		color:RGBA(var(--field-color),.4);
+	}
+
+}
+
+.minimal-field{
+	background-color: transparent;
+	border-bottom: 1px solid var(--field-border);
+
+	border-radius: 0;
+	color: var(--field-color);
+	box-shadow: none;
+
+	&::placeholder{
+		color:RGBA(var(--field-color),.4);
+	}
+}
+
+.minimal-submit{
+	text-transform: uppercase;
+	background: none;
+	padding: 4px;
+	font-size: .7em;
+}
+
+form {
+
+	.field-width,
+	.text input,
+	.password input,
+	.numeric input,
+	.email input,
+	.file input,
+	input[type="text"],
+	input[type="password"],
+	input[type="number"],
+	textarea,
+	select,
+	input[type="month"] {
+		@extend %form-field;
+
+		&:focus{
+			outline: none;
+		}
+	}
+
+
+	label {
+		font-weight: normal;
+		text-transform: none;
+		font-size: 1em;
+		color: var(--label-color);
+	}
+
+	select {
+		/* needed */
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background-size: 12px;
+		background-position: calc(100% - 13px) calc(100% - 11px);
+		background-repeat: no-repeat;
+		padding-right: 30px;
+
+
+	}
+
+	select,
+	select:hover,
+	select:focus {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="451.847px" height="451.847px" fill="%23FFFFFF"><path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+		c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+		c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/></svg>');
+	}
+	select option {
+		background: var(--body-bg);
+	}
+
+	input[type="text"].tiny {
+		width: 45px;
+	}
+	input[type="number"].tiny, select.tiny {
+		width: 68px;
+	}
+
+}
+
+button:focus{
+	outline: none;
+}
+
+.monthpicker_selector {
+	display: block !important;
+}
+
+.monthpicker {
+	display: inline-block;
+	position: relative;
+	outline: none !important;
+}
+
+.monthpicker_selector *::selection {
+	background: transparent;
+}
+
+.monthpicker_input {
+	display: inline-block;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: var(--default-color);
+}
+
+.monthpicker_input.active {
+	background-color: #D4D4D4;
+	color: #000;
+}
+
+.monthpicker_selector {
+	margin: 30px 0;
+	min-width: 173px;
+	z-index: 100;
+}
+
+.monthpicker_selector>table {
+	color: #FFF;
+	width: 100%;
+	text-align: center;
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: .9em;
+}
+
+.monthpicker_selector>table tr:first-child td {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.monthpicker_selector>table tr:first-child>td:nth-child(1) {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+
+.monthpicker_selector>table tr:first-child>td:nth-child(2) {
+	position: relative;
+}
+
+.monthpicker_selector>table tr:first-child>td:nth-child(3) {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.yearSwitch {
+	padding: 5px 10px;
+	color: var(--default-color);
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.yearSwitch.off {
+	visibility: hidden;
+}
+
+.yearValue {
+	text-align: center;
+	color: var(--default-color);
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+/* months */
+.monthpicker_selector .month {
+	border: 1px solid #444;
+	cursor: pointer;
+}
+
+.monthpicker_selector .month:hover {
+	background-color: var(--highlight);
+	color: var(--default-color);
+}
+
+.month.selected {
+	background: var(--primary-color);
+	color: var(--default-color);
+}
+
+.monthpicker_selector .month.off {
+	color: #666;
+	cursor: not-allowed;
+}
+
+.monthpicker_selector .month.off:hover {
+	background: none;
+}
+
+.monthpicker_selector>table tr td:first-child {
+	border-left: none;
+}
+
+.monthpicker_selector>table tr td:last-child {
+	border-right: none;
+}
+
+.monthpicker_selector>table tr:last-child td {
+	border-bottom: none;
+}
+
+
+//filter
+.form-filter{
+	margin-bottom:20px;
+	label{display: none;}
+
+	input[type="submit"]{
+		background: url(../images/search-white.svg) no-repeat center transparent;
+		text-indent: -9999px;
+		background-size: contain;
+		padding: 0;
+		width: 16px;
+		opacity: .6;
+	}
+
+	input[type="text"]{
+		@extend .minimal-field;
+		
+    	padding: 5px;
+		font-size: .9em;
+		max-width: 206px;
+		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+<path fill="%23b5b5b5" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+	s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+	c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+	s-17-7.626-17-17S14.61,6,23.984,6z"/>
+</svg>') no-repeat right 5px transparent;
+		background-size: 12px;
+	}
+}
+
+
+
+//create environment
+.create-form{
+
+	$create-form-bg:var(--create-form-bg);
+	$create-form-title-color:var(--create-form-title-color);
+	$create-form-title-color-hover:var(--create-form-title-color-hover);
+
+	#create-open-button + form{
+		display: none;
+		background: var(--create-form-bg-light);
+		//background: #434b62;
+		padding: .6em .9em;
+		border-radius: 5px;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	#create-open-button{
+		color:$create-form-title-color;
+		background-color: var(--create-form-bg-light);
+		position: relative;
+    	padding-left: 31px;
+
+		&:before, &:after {
+			position: absolute;
+			left: 16px;
+			content: ' ';
+			height: 10px;
+			width: 2px;
+			background-color: $create-form-title-color;
+			top: 15px;
+				}
+		&:before {
+			transform: rotate(90deg);
+		}
+		&:after {
+			transform: rotate(-180deg);
+		}
+
+		&:hover,&:focus{
+			background-color: $create-form-bg;
+			color:$create-form-title-color-hover;
+
+			&:before, &:after {
+				background-color:$create-form-title-color-hover;
+			}
+		}
+
+
+	}
+
+	label{display: none;}
+
+	legend{
+		font-size: 1.1em;
+		margin-bottom: .5em;
+		color:$create-form-title-color;
+	}
+
+	input[type="text"], select{
+		@extend .minimal-field;
+		padding-left: 2px;
+		padding-top: 5px;
+		padding-bottom: 8px;
+		font-size: .9em;
+	}
+
+	input[type="submit"]{
+		@extend .minimal-submit;
+	}
+
+	#create-close-button{
+		text-indent: -9999px;
+		width: 12px;
+		height: 11px;
+		position: absolute;
+		top: 8px;
+    	right: 16px;
+		opacity: .5;
+		&:hover,&:focus{
+			opacity: 1;
+		}
+		&:before, &:after {
+			position: absolute;
+			top:0;
+			right:0;
+			content: ' ';
+			height: 15px;
+			width: 2px;
+			background-color: var(--default-color);
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+	
+}
+
+#login_body{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+	height: calc(100vh - 60px);
+	color:var(--default-color);
+
+	h1{
+		font-size: 4rem;
+	}
+
+	h1,h2{
+		margin:0;
+	}
+	h2{
+		margin-bottom:2rem;
+	}
+
+	form{
+		padding:10px;
+		background: var(--highlight);
+		border-radius: 10px;
+		min-width: 315px;
+	}
+
+	input[type="text"], input[type="password"]{
+		@extend .minimal-field;
+		text-align: center;
+		font-size: 1.1rem;
+		width:100%;
+		max-width: 220px;
+		
+		&:hover, &:focus{
+			border-bottom-color:var(--field-border);
+		}
+		
+	}
+	label{display: none;}
+
+	input[type="submit"]{
+		background-color:transparent;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+
+		&:hover, &:focus{
+			color: #3e70a2;
+		}
+
+	}
+	.form-group{
+		margin-bottom:2rem;
+	}
+
+}

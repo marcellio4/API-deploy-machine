@@ -1,0 +1,104 @@
+// _typo.scss
+a, .button{
+	text-decoration:none;
+	@include transition(all 0.2s linear);
+	border:none;
+}
+
+p{
+	margin-bottom:1.5em;line-height: 1.5
+}
+ul,ol{list-style-position: outside; margin-bottom: 1.5em; margin-left: 2em;}
+li{line-height:1.5;}
+
+
+h2{
+	font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h3{
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+
+h4{
+	font-size: 16px;
+	font-weight:bold;
+}
+
+
+
+img{
+	&.left, &.right{
+		display: block;
+	}
+	&.left {
+    	margin: 0 0 1.5em;
+	}
+	&.right {
+    	margin: 0 0 1.5em;
+	}
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right,.text-align-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@media (min-width: 576px) {
+  .text-sm-left {
+    text-align: left !important;
+  }
+  .text-sm-right {
+    text-align: right !important;
+  }
+  .text-sm-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left !important;
+  }
+  .text-md-right {
+    text-align: right !important;
+  }
+  .text-md-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-lg-left {
+    text-align: left !important;
+  }
+  .text-lg-right {
+    text-align: right !important;
+  }
+  .text-lg-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-xl-left {
+    text-align: left !important;
+  }
+  .text-xl-right {
+    text-align: right !important;
+  }
+  .text-xl-center {
+    text-align: center !important;
+  }
+}
+
+
