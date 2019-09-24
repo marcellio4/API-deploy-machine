@@ -32,7 +32,7 @@ class Job
      */
     public function setLinkParameter($parameters)
     {
-        return  $this->link = "@jenkins.experienceengine.com/job/" . $this->name . "/buildWithParameters?token=" . $this->token . $parameters;
+        return  $this->link = "@jenkins/job/" . $this->name . "/buildWithParameters?token=" . $this->token . $parameters;
     }
 
     /**
@@ -40,6 +40,6 @@ class Job
      */
     public function getLastBuild()
     {
-        return $lastBuild = "@jenkins.experienceengine.com/job/" . $this->name . "/lastBuild/api/json";
+        return $lastBuild = "@jenkins/job/" . $this->name . "/lastBuild/api/json";
     }
 }
